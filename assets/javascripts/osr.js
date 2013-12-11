@@ -2,25 +2,41 @@ OSR = {};
 
 OSR.menu = [
   "Home~index.html",
-  "Der Ortschaftsrat",
-  "Protokolle", [
-    "2012",
-    "2011"
+  "Ortschaftsrat",
+  "Veranstaltungen",
+  "Die Ortsteile", [
+    "Knautnaundorf",
+    "Rehbach",
+    "Hartmannsdorf"
   ],
-  "Aktuelles",
-  "Hartmannsdorf",
-  "Knautnaundorf",
-  "Rahbach",
-  "Neu",
-  "Impressum",
-  "Termine"
+  "Ortsleben",[   // (Hier sollte die Google-Maps-Karte integriert werden)
+    "Historisches",
+    "Einrichtungen",
+    "Landbewirtschaftung",
+    "Kultur / Naherholung",
+    "Lokale Unternehmen"
+  ],
+  "Protokolle",
+  "Themen",[
+   "Kinderspielplatz Hartmannsdorf",
+   "Kinderspielplatz Knautnaundorf",
+   "Elsterbrücke Erikenstraße",
+   "Straßensanierung",
+   "Internetversorgung",
+   "Elsterstausee",
+   "Lärmproblematik",
+   "Kiesgrube Rehbach",
+   "Radwege",
+   "ÖPNV"
+  ],
+  "Newsletter",
+  "Impressum"
 ];
 
-/**********************************************************************************************************************/
-/**********************************************************************************************************************/
-/****                         Edit stuff below only if you really know what you are doing                          ****/
-/**********************************************************************************************************************/
-/**********************************************************************************************************************/
+
+/***********************/
+/**   Uninteressant   **/
+/***********************/
 
 OSR.init = function () {
   this.setHeadingFromTitle();
