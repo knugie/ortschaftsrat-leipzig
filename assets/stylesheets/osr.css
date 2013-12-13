@@ -41,6 +41,11 @@ h2 {
   margin: 0 0 24px 0;
 }
 
+h3 {
+  font-size: 18px;
+  margin: 12px 0 2px 0;
+}
+
 div.site {
     display: block;
     width: 1000px;
@@ -126,6 +131,17 @@ article.content {
     padding: 14px 0 0 0;
 }
 
+article.content > table {
+  border: 1px solid;
+  border-spacing:0;
+  border-collapse:collapse;
+}
+
+article.content > table th, article.content > table td {
+  border: 1px solid;
+  padding: 3px;
+}
+
 footer {
     margin: 15px 0 15px 0;
     text-align: center;
@@ -176,6 +192,6 @@ footer > nav > a.current {
   margin-bottom: 5px;
 }
 
-.business-card > span {
-
+.center {
+  text-align: center;
 }
