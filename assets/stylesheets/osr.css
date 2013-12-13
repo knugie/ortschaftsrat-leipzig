@@ -123,22 +123,6 @@ nav.left a.current {
   cursor: default;
 }
 
-nav.footer a.current {
-  cursor: text;
-  color: #8BA592;
-}
-
-footer > nav > a {
-  outline: none;
-  margin: 0 0 5px 0;
-  font-size: 13px;
-  font-family: arial, helvetica, sans-serif;
-  padding: 5px 5px 5px 5px;
-  text-decoration: none;
-  display: inline-block;
-  color: #002200;
-}
-
 article.content {
     display: block;
     text-align: left;
@@ -159,8 +143,7 @@ article.content > table th, article.content > table td {
 }
 
 footer {
-    height: 125px;
-    margin: 17px 0 5px 0;
+    margin: 15px 0 15px 0;
     text-align: center;
     display: block;
 }
@@ -176,6 +159,21 @@ footer > hr {
     background-image: -moz-linear-gradient(left, #BBB, #5C6F61, #BBB);
     background-image: -ms-linear-gradient(left, #BBB, #5C6F61, #BBB);
     background-image: -o-linear-gradient(left, #BBB, #5C6F61, #BBB);
+}
+
+footer > nav > a {
+  outline: none;
+  margin: 0 10px 3px 0;
+  font-size: 13px;
+  font-family: arial, helvetica, sans-serif;
+  text-decoration: none;
+  display: inline-block;
+  color: #002200;
+}
+
+footer > nav > a.current {
+  cursor: text;
+  color: #8BA592;
 }
 
 .business-card {
