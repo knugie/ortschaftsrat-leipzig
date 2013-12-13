@@ -127,7 +127,7 @@ OSR.setHeadingFromTitle = function () {
 
 OSR.setNavigationLeft = function () {
   if (this.validNavigationLeft()) {
-    var nav, ul, li, a, text, sText, content, prefix, cText, cUl, cLi, cHref, href, idx, cIdx;
+    var nav, ul, li, a, text, sText, content, prefix, cText, cUl, cLi, cHref, href, idx, cIdx, idxOffset = 0;
     nav = $('nav.left');
     ul = $('<ul>');
     for (idx = 0; idx < this.menu.length; idx += 1) {
@@ -147,16 +147,17 @@ OSR.setNavigationLeft = function () {
           for (cIdx = 0; cIdx < content.length; cIdx += 1) {
             cText = content[cIdx];
             cHref = prefix + this.sanitizeString(cText) + '.html';
-            a = $('<a>', {href: cHref, item: idx}).html(cText);
+            a = $('<a>', {href: cHref, item: idx - idxOffset}).html(cText);
             if (cHref === OSR.currentLocation()) {a.addClass('current').removeAttr('href'); }
             cLi = $('<li>').append(a);
             cUl.append(cLi);
           }
+          idxOffset += 1;
         } else {
           href = href || this.sanitizeString(text) + '.html';
           cUl = null;
         }
-        a = $('<a>', {href: href, item: idx}).html(text);
+        a = $('<a>', {href: href, item: idx - idxOffset}).html(text);
         if (href === OSR.currentLocation()) {
           a.addClass('current').removeAttr('href');
         }
@@ -167,7 +168,10 @@ OSR.setNavigationLeft = function () {
     }
 
     ul.accordion({
-      heightStyle: "content",
+      event: 'click',
+      heightStyle: 'content',
+      collapsible: true,
+      icons: { "header": "ui-icon-plus", "activeHeader": "ui-icon-minus" },
       active: parseInt(ul.find('a.current').attr('item'), 10)
     });
     nav.append(ul);
@@ -178,11 +182,14 @@ OSR.setNavigationLeft = function () {
 OSR.setFooter = function () {
   if (this.validFooter() && this.validNavigationLeft()) {
     var nav, links;
-    links = $("nav.left > ul > li > a[href!='#']").clone();
-    links.each(function (test){
+    links = $("nav.left > ul > li  a[href!='#']").clone();
+    links.filter('.current').removeAttr('item').removeAttr('class').addClass('current');
+    links.not('.current').removeAttr('item').removeAttr('class');
+    links.each(function () {
       $(this).text('[' + $(this).text() + ']');
     })
-    nav = $('<nav class="footer"></nav>').append(links);
+    links.find('[current]').addClass('current').removeAttr('current');
+    nav = $('<nav>').append(links);
     $('footer').html('<hr>').append(nav);
   }
 };
@@ -201,9 +208,9 @@ OSR.sanitizeString = function (str) {
     replace(/\u00d6/g, 'Oe').
     replace(/\u00dc/g, 'Ue').
     replace(/\u00df/g, 'ss').
-    replace(/\s+/g, '_').
     toLowerCase().
-    replace(/[^a-z0-9_\-]/g, '')
+    replace(/[^a-z0-9_\-]/g, ' ').
+    replace(/\s+/g, '_')
 };
 
 $(document).ready(function () {
