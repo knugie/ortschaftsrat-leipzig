@@ -161,3 +161,23 @@ footer > hr {
     background-image: -ms-linear-gradient(left, #BBB, #5C6F61, #BBB);
     background-image: -o-linear-gradient(left, #BBB, #5C6F61, #BBB);
 }
+
+.business-card {
+  margin: 20px 0 40px 0;
+  overflow: hidden;
+}
+
+.business-card > img {
+  float: left;
+  margin: 3px 10px 3px 3px;
+  max-width: 150px;
+  max-height: 250px;
+}
+
+.business-card > h3 {
+  margin-bottom: 5px;
+}
+
+.business-card > span {
+
+}
