@@ -127,17 +127,18 @@ OSR.setHeadingFromTitle = function () {
 
 OSR.setNavigationLeft = function () {
   if (this.validNavigationLeft()) {
-    var nav, ul, li, a, text, sText, content, prefix, cText, cUl, cLi, cHref, href, idx, cIdx, idxOffset = 0;
+    var nav, ul, li, a, text, tmpText, content, prefix, cText, cUl, cLi, cHref, href, idx, cIdx, idxOffset = 0;
     nav = $('nav.left');
     ul = $('<ul>');
     for (idx = 0; idx < this.menu.length; idx += 1) {
       if (typeof this.menu[idx] === 'string') {
         text = this.menu[idx];
-        href = null;
         if (/~/.test(text)) {
-          sText = text.split(/~/);
-          text = sText[0];
-          href = sText[1];
+          tmpText = text.split(/~/);
+          text = tmpText[0];
+          href = tmpText[1];
+        } else {
+          href = this.sanitizeString(text) + '.html'
         }
         content = this.menu[idx + 1];
         if (content && typeof content === 'object' && content.length && typeof content.length === 'number' && content.length > 0) {
@@ -146,7 +147,13 @@ OSR.setNavigationLeft = function () {
           prefix = this.sanitizeString(text) + '_';
           for (cIdx = 0; cIdx < content.length; cIdx += 1) {
             cText = content[cIdx];
-            cHref = prefix + this.sanitizeString(cText) + '.html';
+            if (/~/.test(cText)) {
+              tmpText = cText.split(/~/);
+              cText = tmpText[0];
+              cHref = tmpText[1];
+            } else {
+              cHref = prefix + this.sanitizeString(cText) + '.html';
+            }
             a = $('<a>', {href: cHref, item: idx - idxOffset}).html(cText);
             if (cHref === OSR.currentLocation()) {a.addClass('current').removeAttr('href'); }
             cLi = $('<li>').append(a);
@@ -154,7 +161,6 @@ OSR.setNavigationLeft = function () {
           }
           idxOffset += 1;
         } else {
-          href = href || this.sanitizeString(text) + '.html';
           cUl = null;
         }
         a = $('<a>', {href: href, item: idx - idxOffset}).html(text);
