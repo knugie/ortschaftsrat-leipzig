@@ -3,18 +3,18 @@ OSR = {};
 OSR.menu = [
   "Home~index.html",
   "Ortschaftsrat",
-  "Veranstaltungen",
+  "Veranstaltungen~under_construction.html",
   "Die Ortsteile", [
-    "Knautnaundorf",
-    "Rehbach",
+    "Knautnaundorf~under_construction.html",
+    "Rehbach~under_construction.html",
     "Hartmannsdorf"
   ],
   "Ortsleben",[   // (Hier sollte die Google-Maps-Karte integriert werden)
-    "Historisches",
-    "Einrichtungen",
-    "Landbewirtschaftung",
-    "Kultur / Naherholung",
-    "Lokale Unternehmen"
+    "Historisches~under_construction.html",
+    "Einrichtungen~under_construction.html",
+    "Landbewirtschaftung~under_construction.html",
+    "Kultur / Naherholung~under_construction.html",
+    "Lokale Unternehmen~under_construction.html"
   ],
   "Protokolle",
   "Themen",[
