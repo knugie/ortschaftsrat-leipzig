@@ -3,6 +3,7 @@
 Vorschau: [http://knugie.github.io/ortschaftsrat-leipzig/](http://knugie.github.io/ortschaftsrat-leipzig/)  
 Final: [http://ortschaftsrat-leipzig.de](http://ortschaftsrat-leipzig.de)
 
+Zum synchronisieren auf "compare & review" klicken, die Basisversion auswählen (in die die Änderungen integriert werden sollen) , die Compareversion auswählen (die die Änderungen enthält). - Breite Zeile unter der Auswahl klicken und nochmals "Submit" klicken. Anschließend "Merge" klicken.
 
 ## Die Ordnerstruktur
     .
