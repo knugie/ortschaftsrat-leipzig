@@ -2,7 +2,9 @@ OSR = {};
 
 OSR.menu = [
   "Home~index.html",
-  "Ortschaftsrat",
+  "Ortschaftsrat", [
+    "Sitzungstermine"
+  ],
   "Veranstaltungen~under_construction.html",
   "Die Ortsteile", [
     "Knautnaundorf~under_construction.html",
