@@ -38,7 +38,7 @@ header > h1 {
 
 h2 {
   font-size: 20px;
-  margin: 0 0 24px 0;
+  margin: 15px 0 24px 0;
 }
 
 h3 {
@@ -127,12 +127,55 @@ nav.left a.current {
   cursor: default;
 }
 
+article.top {
+    display: block;
+    text-align: left;
+    width: 790px;
+    float: right;
+    padding: 14px 0 0 0;
+}
+
+article.top > table {
+  border: 0px solid;
+  border-spacing:0;
+  border-collapse:collapse;
+}
+
+article.top > table th, article.top > table td {
+  border: 0px solid;
+  padding: 10px;
+}
+
+article.top > img {
+  float: right;
+  margin: 10px 10px 10px 10px;
+  max-width: 300px;
+  max-height: 350px;
+}
+
+article.top > hr {
+    overflow: auto;
+    border: 0;
+    height: 2px;
+    width: 790px;
+    margin: 17px auto 17px auto;    
+    background-image: -webkit-linear-gradient(left, #BBB, #5C6F61, #BBB);
+    background-image: -moz-linear-gradient(left, #BBB, #5C6F61, #BBB);
+    background-image: -ms-linear-gradient(left, #BBB, #5C6F61, #BBB);
+    background-image: -o-linear-gradient(left, #BBB, #5C6F61, #BBB);
+}
+
+
 article.content {
     display: block;
     text-align: left;
     width: 790px;
     float: right;
     padding: 14px 0 0 0;
+}
+
+article.content > p {
+    margin: 15px 0 0px 0;
 }
 
 article.content > table {
