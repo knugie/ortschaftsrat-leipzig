@@ -20,56 +20,71 @@
   <article class="content">
 
     <h2>Demo für Formatierungen</h2>
+    <p>
+      SIEHE: <a href="http://de.selfhtml.org/navigation/html.htm">de.selfhtml.org --> HTML</a> und
+      <a href="http://de.selfhtml.org/navigation/css.htm">de.selfhtml.org --> CSS</a><br>
+      Dokumentstruktur und Dokumentformatierung sollten so gut wie möglich getrennt werden in
+      <a target="_blank" href="https://raw.github.com/knugie/ortschaftsrat-leipzig/master/demo.html">HTML</a> und
+      <a target="_blank" href="https://raw.github.com/knugie/ortschaftsrat-leipzig/master/assets/stylesheets/osr.css">CSS</a>.
+    </p><br><hr><br>
 
-    <p>
-      hier kommt eine Tabelle mit sichtbaren Rändern<br>
-      <br>
-      <br>
-    </p>
-    
-    <p>
-      hier kommt ein Bild, inklusive Weblink<br>
-      <br>
-      <a  href="./aktuelles.html">
-        <img src="./assets/images/fs_higru2.jpg" border="0">
-      </a>
+    <p><h4>Überschriften</h4>
+      <h1>Überschrift 1</h1>
+      <h2>Überschrift 2</h2>
+      <h3>Überschrift 3</h3>
+      <h4>Überschrift 4</h4>
+      <h5>Überschrift 5</h5>
+      <i>kursiv</i><br>
+      <i>fett</i><br>
+      <u>unterstrichen</u><br>
+      <strike>durchgestrichen</strike>
+    </p><br><hr><br>
 
-    <br>
-    </p>
-    
-    <p>
-      hier kommt ein Link, der im neuen Tab geöffnet wird<br>
-      <br>
-        <a target="_blank"  href="./aktuelles.html">
-        <img src="./assets/images/fs_higru2.jpg" border="0">
-      </a>
 
-      <br>
-    </p>
-    
-    <p>
-      hier kommt eine Tabelle mit unsichtbaren Rändern<br>
-      <br>
-      <br>
-    </p>
-    
-    <p>
-      hier kommt ein Bild, das bei klick einen Dateidownload startet: Datei speichern unter...<br>
-      <br>
-      <br>
-    </p>
+    <p><h4>Tabelle mit sichtbaren Rändern</h4>
+    <table>
+      <thead>
+        <tr><th>Kopf 1</th><th>Kopf 2</th></tr>
+      </thead>
+      <tboby>
+        <tr><td>Inhalt 1/1</td><td>Inhalt 1/2</td></tr>
+        <tr><td>Inhalt 2/1</td><td>Inhalt 2/2</td></tr>
+        <tr><td>Inhalt 3/1</td><td>Inhalt 3/2</td></tr>
+      </tboby>
+    </table>
+    </p><br><hr><br>
 
-    <p>
-      hier kommt Fließtext in allen voreingestellten Variationen h1-h6 sowie groß, klein, Fett, unterstrichen etc...<br>
-      <br>
-      <br>
-    </p>
-    
-    <p>
-      hier kommt ein Strich von links nach echts<br>
-    <hr> <!-- Kommentar: horizontal ruler -->      
-    <br>
-      <br>
+    <p><h4>Tabelle ohne Rahmen</h4>
+    <table class='no-border'>
+      <thead>
+      <tr><th>Kopf 1</th><th>Kopf 2</th></tr>
+      </thead>
+      <tboby>
+        <tr><td>Inhalt 1/1</td><td>Inhalt 1/2</td></tr>
+        <tr><td>Inhalt 2/1</td><td>Inhalt 2/2</td></tr>
+        <tr><td>Inhalt 3/1</td><td>Inhalt 3/2</td></tr>
+      </tboby>
+    </table>
+    </p><br><hr><br>
+
+    <p><h4>Link, der im neuen Tab geöffnet wird</h4>
+    <a target="_blank"  href="./aktuelles.html">Neuer Tab!</a>
+    </p><br><hr><br>
+
+    <p><h4>Bild, inklusive Weblink</h4>
+    <a href="https://github.com/knugie/ortschaftsrat-leipzig">
+      <img src="assets/images/Leipzig_grob.gif" width="166" height="200" alt="Leipzig"/>
+    </a>
+    </p><br><hr><br>
+
+    <p><h4>Bild, inklusive Download-Link</h4>
+    <a href="http://knugie.github.io/ortschaftsrat-leipzig/downloads/Protokoll%2013-11%2004.12.2013.pdf">
+      <img src="assets/images/Leipzig_grob.gif" width="166" height="200" alt="Leipzig"/>
+    </a>
+    </p><br><hr><br>
+
+    <p><h4>Strich von links nach rechts</h4>
+    <hr> <!-- Kommentar: horizontal ruler -->
     </p>
 
   </article>
