@@ -25,7 +25,7 @@ OSR.menu = [
    "Kinderspielplatz Hartmannsdorf",
    "Kinderspielplatz Knautnaundorf",
    "Elsterbrücke Erikenstraße",
-   "Straßensanierung",
+   "Straßenzustand",
    "Internetversorgung",
    "Elsterstausee",
    "Lärmproblematik",
