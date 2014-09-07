@@ -31,7 +31,8 @@ OSR.menu = [
    "Lärmproblematik",
    "Kiesgrube Rehbach",
    "Radwege",
-   "ÖPNV"
+   "ÖPNV",
+   "Nahversorgung"
   ],
   "Newsletter",
   "Impressum"
