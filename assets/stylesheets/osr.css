@@ -185,6 +185,14 @@ article.content > p {
     margin: 15px 0 0px 0;
 }
 
+article.content > img {
+  display: block;
+  float: right;
+  margin: 10px 10px 10px 10px;
+  max-width: 200px;
+  max-height: 250px;
+}
+
 article.content > table {
   border: 1px solid;
   border-spacing:0;
